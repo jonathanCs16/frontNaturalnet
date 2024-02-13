@@ -4,6 +4,9 @@ import {
   AiOutlineMenu,
   AiOutlineClose,
 } from "react-icons/ai";
+import { BiLogIn } from "react-icons/bi";
+
+
 
 const links = [
   {
@@ -51,31 +54,41 @@ const NavBar = () => {
   }, [windowDimesion.innerWidth]);
 
   return (
-    <div className='flex items-center w-full px-4 justify-around bg-slate-500'>
+    <div className={
+      !isMenuOpen 
+      ? 'navbar flex fixed items-center w-full px-4 justify-around bg-slate-500'
+      :
+      'flex fixed flex-col h-full items-center w-full px-4 justify-around bg-slate-500'
+    }>
       <Link to={"/"} className='text-white font-semibold text-x1 p-2'>
-      <img src='/frontNaturalnet/src/img/lofo.png'></img>
+        <img className="logo" src='/src/img/logo.png'></img>
       </Link>
       {
-        windowDimesion.innerWidth > 768 ?
+        windowDimesion.innerWidth < 768 ?
           links.map(l => (
-            <Link 
-            className="text-x1 text-white font-semiboul" 
-            to={l.link} 
-            key={l.id}
+            <Link
+              className="text-x1 text-white font-semiboul"
+              to={l.link}
+              key={l.id}
             >
               {l.text}
             </Link>
           )) :
           isMenuOpen && links.map(l => (
-              <Link 
-              className="text-x1 text-white font-semiboul" 
-              to={l.link} 
+            <Link
+              className="text-x1 text-white font-semiboul"
+              to={l.link}
               key={l.id}
-              >
-                {l.text}
-              </Link>
-            ))
+            >
+              {l.text}
+            </Link>
+          ))
       }
+      <BiLogIn className="ns"
+        color='#119F27'
+        size={20}
+      />
+      <p>Registro</p>
       {!isMenuOpen ? (
         <AiOutlineMenu
           size={24}
@@ -89,8 +102,10 @@ const NavBar = () => {
           onClick={() => setMenuOpen(false)}
         />
       )}
+
+
     </div>
-  );  
+  );
 };
 
 export default NavBar

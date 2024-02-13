@@ -15,4 +15,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+/*-----------------navbar---------------*/
+div .navbar{
+  background-color: #262525;
+  height: 100px;
+}
+.logo{
+  height: 70px;
+  width: 60px;
+}
+.ns{
+  padding-right: 0px;
+}
