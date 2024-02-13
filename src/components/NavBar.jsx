@@ -29,38 +29,68 @@ const links = [
 ];
 
 const NavBar = () => {
-const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
-const [windowDimesion, setWindowDimension] = useState({
-  innerHeight: window.innerHeight,
-  innerWidth: window.innerWidth,
-});
-
-const detectSize = () => {
-  setWindowDimension({
+  const [windowDimesion, setWindowDimension] = useState({
     innerHeight: window.innerHeight,
     innerWidth: window.innerWidth,
   });
-};
 
-  useEffect(() =>{
+  const detectSize = () => {
+    setWindowDimension({
+      innerHeight: window.innerHeight,
+      innerWidth: window.innerWidth,
+    });
+  };
+
+  useEffect(() => {
     window.addEventListener("resize", detectSize);
     return () => {
       window.addEventListener("resize", detectSize);
     };
-  },[windowDimesion.innerWidth]);
+  }, [windowDimesion.innerWidth]);
 
   return (
-    <div className='flex w-full px-4 justify-center bg-slate-500'>
+    <div className='flex items-center w-full px-4 justify-around bg-slate-500'>
       <Link to={"/"} className='text-white font-semibold text-x1 p-2'>
-        Logo
+      <img src='/frontNaturalnet/src/img/lofo.png'></img>
       </Link>
       {
-        !isMenuOpen ?
-        <AiOutlineMenu/>
+        windowDimesion.innerWidth > 768 ?
+          links.map(l => (
+            <Link 
+            className="text-x1 text-white font-semiboul" 
+            to={l.link} 
+            key={l.id}
+            >
+              {l.text}
+            </Link>
+          )) :
+          isMenuOpen && links.map(l => (
+              <Link 
+              className="text-x1 text-white font-semiboul" 
+              to={l.link} 
+              key={l.id}
+              >
+                {l.text}
+              </Link>
+            ))
       }
+      {!isMenuOpen ? (
+        <AiOutlineMenu
+          size={24}
+          color='#f2f2f2'
+          onClick={() => setMenuOpen(true)}
+        />
+      ) : (
+        <AiOutlineClose
+          size={24}
+          color='#f2f2f2'
+          onClick={() => setMenuOpen(false)}
+        />
+      )}
     </div>
-  );
+  );  
 };
 
 export default NavBar
