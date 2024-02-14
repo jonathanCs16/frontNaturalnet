@@ -1,9 +1,9 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, BrowserRouter, Route } from 'react-router-dom'; 
 import Home from './Pages/Home'
-import Qincho from './Pages/Home'
-import Add from './Pages/Home'
-import Profile from './Pages/Home'
+import Qincho from './Pages/Qincho'
+import Add from './Pages/Add'
+import Profile from './Pages/Profile'
 import NavBar from './components/NavBar';
 
 function App() {

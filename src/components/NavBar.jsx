@@ -1,111 +1,48 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from "react-router-dom";
-import {
-  AiOutlineMenu,
-  AiOutlineClose,
-} from "react-icons/ai";
+import { NavLink } from "react-router-dom";
+import "./NavBar.css";
 import { BiLogIn } from "react-icons/bi";
+import { TiThMenu } from "react-icons/ti";
+import  logo  from '../img/logo.png'
 
-
-
-const links = [
-  {
-    link: '/',
-    text: 'Home',
-    id: 1,
-  },
-  {
-    link: '/Add',
-    text: 'Add',
-    id: 2,
-  },
-  {
-    link: '/Qincho',
-    text: 'Qincho',
-    id: 3,
-  },
-  {
-    link: '/Profile',
-    text: 'Profile',
-    id: 4,
-  },
-];
 
 const NavBar = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
-
-  const [windowDimesion, setWindowDimension] = useState({
-    innerHeight: window.innerHeight,
-    innerWidth: window.innerWidth,
-  });
-
-  const detectSize = () => {
-    setWindowDimension({
-      innerHeight: window.innerHeight,
-      innerWidth: window.innerWidth,
-    });
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", detectSize);
-    return () => {
-      window.addEventListener("resize", detectSize);
-    };
-  }, [windowDimesion.innerWidth]);
+  const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <div className={
-      !isMenuOpen 
-      ? 'navbar flex fixed items-center w-full px-4 justify-around bg-slate-500'
-      :
-      'flex fixed flex-col h-full items-center w-full px-4 justify-around bg-slate-500'
-    }>
-      <Link to={"/"} className='text-white font-semibold text-x1 p-2'>
-        <img className="logo" src='/src/img/logo.png'></img>
-      </Link>
-      {
-        windowDimesion.innerWidth < 768 ?
-          links.map(l => (
-            <Link
-              className="text-x1 text-white font-semiboul"
-              to={l.link}
-              key={l.id}
-            >
-              {l.text}
-            </Link>
-          )) :
-          isMenuOpen && links.map(l => (
-            <Link
-              className="text-x1 text-white font-semiboul"
-              to={l.link}
-              key={l.id}
-            >
-              {l.text}
-            </Link>
-          ))
-      }
-      <BiLogIn className="ns"
-        color='#119F27'
-        size={20}
-      />
-      <p>Registro</p>
-      {!isMenuOpen ? (
-        <AiOutlineMenu
-          size={24}
-          color='#f2f2f2'
-          onClick={() => setMenuOpen(true)}
+    <nav>
+      
+      <div className="menu"
+        onClick={() => {
+          setMenuOpen(!menuOpen);
+        }}
+      >
+        <TiThMenu
+        color='119F27'
+        size={50}
+        padding={30}
+        background-color='262525'
         />
-      ) : (
-        <AiOutlineClose
-          size={24}
-          color='#f2f2f2'
-          onClick={() => setMenuOpen(false)}
-        />
-      )}
+      </div>
+      <img src={logo} alt="" />
+      <ul className={menuOpen ? "open" : ""}>
+        <li>
+          <NavLink to="/">Inicio</NavLink>
+        </li>
+        <li>
+          <NavLink to="/Qincho">Qincho</NavLink>
+        </li>
+        <li>
+          <NavLink to="/Profile">Perfil</NavLink>
+        </li>
+        <li>
+          <NavLink to="/Add">Agregar</NavLink>
+        </li>
+      </ul>
+    </nav>
 
-
-    </div>
   );
+
 };
 
 export default NavBar
