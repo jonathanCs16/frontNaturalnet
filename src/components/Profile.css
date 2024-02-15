@@ -1,0 +1,48 @@
+.perfil{
+    display: block;
+    background-color: #119F27;
+    height: 35rem;
+    width: 20%;
+    border-radius: 0 1rem 1rem 0;
+    position: fixed;
+    color: white;
+    align-items: center;
+    padding: 2rem;
+}
+.perfil h1, p, h2{
+    background-color: #119F27;
+    text-align: center;
+}
+
+.perfil h1{
+    font-size: 2rem;
+}
+
+.perfil h2{
+    font-size: 1.5rem;
+}
+
+.perfil img{
+    border-radius: 50%;
+    height: 8rem;
+    width: 8rem;
+    margin: 1rem 2.5rem;
+}
+
+.perfil .linea{
+    border: 1px solid white;
+    margin: 2rem 0 1rem 0;
+}
+
+.contenido{
+    display: block;
+    /* border: 2px solid white; */
+    margin-left: 10rem;
+    color: white;
+    /* height: 33rem; */
+    border-radius: none;
+}
+
+.contenido h1{
+    margin-left: 20rem;
+}

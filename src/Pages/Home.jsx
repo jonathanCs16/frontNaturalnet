@@ -13,35 +13,43 @@ const Home = () => {
         <img src={qincho1} alt="" className='card-img' />
         <div className='contenido'>
           <h1 className='card-title'>My title</h1>
-          <p className="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque sequi, adipisci laborum numquam possimus illum officia impedit aliquam est error similique veniam quos? Consequatur temporibus aliquid incidunt deleniti! Eum, et.</p>
-          <a href="cardpage" className='card-btn'>Disponible</a>
+          <p className="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit facilis veniam aut ratione ducimus dolor quidem sapiente esse consectetur ut corrupti officia animi, mollitia accusamus quaerat saepe eos, eius alias.</p>
+          <div>
+            <a href="cardpage" className='card-btn'>Disponible</a>
+          </div>
         </div>
       </div>
 
       <div>
-        <img src={qincho1} alt="" className='card-img' />
+        <img src={qincho2} alt="" className='card-img' />
         <div className='contenido'>
           <h1 className='card-title'>My title</h1>
-          <p className="card-description">desceipcion</p>
-          <a href="cardpage" className='card-btn'>Disponible</a>
+          <p className="card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero distinctio explicabo expedita atque, voluptatum similique aliquam nesciunt deleniti amet odit enim officiis illum soluta rerum error velit debitis rem Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, distinctio.</p>
+          <div>
+            <a href="cardpage" className='card-btn'>Disponible</a>
+          </div>
         </div>
       </div>
 
       <div>
-        <img src={qincho1} alt="" className='card-img' />
+        <img src={qincho3} alt="" className='card-img' />
         <div className='contenido'>
           <h1 className='card-title'>My title</h1>
-          <p className="card-description">desceipcion</p>
-          <a href="cardpage" className='card-btn'>Disponible</a>
+          <p className="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste unde atque neque et officiis, aperiam corrupti magnam assumenda, optio earum perferendis. Harum atque ullam voluptates, exercitationem a deserunt. Accusantium, officiis.</p>
+          <div>
+            <a href="cardpage" className='card-btn'>Disponible</a>
+          </div>
         </div>
       </div>
 
       <div>
-        <img src={qincho1} alt="" className='card-img' />
+        <img src={qincho4} alt="" className='card-img' />
         <div className='contenido'>
           <h1 className='card-title'>My title</h1>
-          <p className="card-description">desceipcion</p>
-          <a href="cardpage" className='card-btn'>Disponible</a>
+          <p className="card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus nisi rem temporibus necessitatibus, doloribus numquam? Aut officiis earum, qui eos nobis placeat dolorem maxime quo modi laborum soluta vitae dolores.</p>
+          <div>
+            <a href="cardpage" className='card-btn'>Disponible</a>
+          </div>
         </div>
       </div>
     </div>
