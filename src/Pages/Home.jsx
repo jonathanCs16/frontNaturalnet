@@ -7,34 +7,42 @@ import qincho4 from '../img/qincho4.jpg'
 
 const Home = () => {
   return (
-    
+
     <div className="card-container">
-      <div className='card1'>
-      <img src={qincho1} alt="" className='card-img' />
-      <h1 className='card-title'>My title</h1>
-      <p className="card-description">desceipcion</p>
-      <a href="cardpage" className='card-btn'>Disponible</a>
+      <div>
+        <img src={qincho1} alt="" className='card-img' />
+        <div className='contenido'>
+          <h1 className='card-title'>My title</h1>
+          <p className="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque sequi, adipisci laborum numquam possimus illum officia impedit aliquam est error similique veniam quos? Consequatur temporibus aliquid incidunt deleniti! Eum, et.</p>
+          <a href="cardpage" className='card-btn'>Disponible</a>
+        </div>
       </div>
 
-      <div className='card2'>
-      <img src={qincho1} alt="" className='card-img' />
-      <h1 className='card-title'>My title</h1>
-      <p className="card-description">desceipcion</p>
-      <a href="cardpage" className='card-btn'>Disponible</a>
+      <div>
+        <img src={qincho1} alt="" className='card-img' />
+        <div className='contenido'>
+          <h1 className='card-title'>My title</h1>
+          <p className="card-description">desceipcion</p>
+          <a href="cardpage" className='card-btn'>Disponible</a>
+        </div>
       </div>
 
-      <div className='card3'>
-      <img src={qincho1} alt="" className='card-img' />
-      <h1 className='card-title'>My title</h1>
-      <p className="card-description">desceipcion</p>
-      <a href="cardpage" className='card-btn'>Disponible</a>
+      <div>
+        <img src={qincho1} alt="" className='card-img' />
+        <div className='contenido'>
+          <h1 className='card-title'>My title</h1>
+          <p className="card-description">desceipcion</p>
+          <a href="cardpage" className='card-btn'>Disponible</a>
+        </div>
       </div>
 
-      <div className='card4'>
-      <img src={qincho1} alt="" className='card-img' />
-      <h1 className='card-title'>My title</h1>
-      <p className="card-description">desceipcion</p>
-      <a href="cardpage" className='card-btn'>Disponible</a>
+      <div>
+        <img src={qincho1} alt="" className='card-img' />
+        <div className='contenido'>
+          <h1 className='card-title'>My title</h1>
+          <p className="card-description">desceipcion</p>
+          <a href="cardpage" className='card-btn'>Disponible</a>
+        </div>
       </div>
     </div>
 
